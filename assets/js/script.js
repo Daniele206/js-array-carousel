@@ -32,13 +32,23 @@ topBtn.addEventListener('click', function(){
     imgCollection[counter].classList.add('hide');
     counter--
     imgCollection[counter].classList.remove('hide');
-  }
-})
+  };
+  if(counter === 0){
+    imgCollection[counter].classList.add('hide');
+    counter = (imgCollection.length -1);
+    imgCollection[counter].classList.remove('hide');
+  };
+});
 
 bottomBtn.addEventListener('click', function(){
   if(counter < (imgCollection.length - 1)){
     imgCollection[counter].classList.add('hide');
     counter++
     imgCollection[counter].classList.remove('hide');
-  }
-})
+  };
+  if(counter === (imgCollection.length - 1)){
+    imgCollection[counter].classList.add('hide');
+    counter = 0;
+    imgCollection[counter].classList.remove('hide');
+  };
+});
