@@ -1,4 +1,4 @@
-// element
+// array
 const listImg = [
   'assets/img/01.webp',
   'assets/img/02.webp',
@@ -7,12 +7,17 @@ const listImg = [
   'assets/img/05.webp',
 ];
 
+// variables
 const imgContainer = document.querySelector('.img-container');
-
-let counter = 0;
 const topBtn = document.querySelector('.top');
 const bottomBtn = document.querySelector('.bottom');
+let counter = 0;
 
+// array-className
+const imgCollection = document.getElementsByClassName('img');
+const imgPreviewCollection = document.getElementsByClassName('img-preview');
+
+// code
 
 for(let i = 0; i < listImg.length; i++){
   const img = listImg[i];
@@ -20,11 +25,6 @@ for(let i = 0; i < listImg.length; i++){
   <img class="img hide" src="${img}">
   `
 };
-
-const imgCollection = document.getElementsByClassName('img');
-const imgPreviewCollection = document.getElementsByClassName('img-preview');
-
-console.log(imgCollection);
 
 imgCollection[counter].classList.remove('hide');
 imgPreviewCollection[counter].classList.remove('shadow');
