@@ -15,12 +15,16 @@
 
 .carousel{
   position: relative;
-  height: 40%;
+  height: 50%;
   width: 60%;
-  background-color: red;
+  background-color: black;
 }
 
-.carousel img{
+.img-container{
+  height: 100%;
+}
+
+.img-container img{
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -54,4 +58,12 @@
 
 .bottom{
   bottom: 0;
+}
+
+.hide{
+  display: none;
+}
+
+.shadow{
+  filter: opacity(30%);
 }
