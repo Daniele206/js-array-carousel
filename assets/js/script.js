@@ -32,41 +32,27 @@ imgPreviewCollection[counter].classList.add('selected');
 
 
 topBtn.addEventListener('click', function(){
-  if(counter > 0){
     imgCollection[counter].classList.add('hide');
     imgPreviewCollection[counter].classList.add('shadow');
     imgPreviewCollection[counter].classList.remove('selected');
     counter--
+    if (counter < 0){
+      counter = (imgCollection.length - 1);
+    }
     imgCollection[counter].classList.remove('hide');
     imgPreviewCollection[counter].classList.remove('shadow');
     imgPreviewCollection[counter].classList.add('selected');
-  }else if(counter === 0){
-    imgCollection[counter].classList.add('hide');
-    imgPreviewCollection[counter].classList.add('shadow');
-    imgPreviewCollection[counter].classList.remove('selected');
-    counter = (imgCollection.length -1);
-    imgCollection[counter].classList.remove('hide');  
-    imgPreviewCollection[counter].classList.remove('shadow');
-    imgPreviewCollection[counter].classList.add('selected');
-  };
 });
 
 bottomBtn.addEventListener('click', function(){
-  if(counter < (imgCollection.length - 1)){
     imgCollection[counter].classList.add('hide');
     imgPreviewCollection[counter].classList.add('shadow');
     imgPreviewCollection[counter].classList.remove('selected');
     counter++
+    if (counter > (imgCollection.length - 1)){
+      counter = 0;
+    }
     imgCollection[counter].classList.remove('hide');
     imgPreviewCollection[counter].classList.remove('shadow');
     imgPreviewCollection[counter].classList.add('selected');
-  }else if(counter === (imgCollection.length - 1)){
-    imgCollection[counter].classList.add('hide');    
-    imgPreviewCollection[counter].classList.add('shadow');
-    imgPreviewCollection[counter].classList.remove('selected');
-    counter = 0;
-    imgCollection[counter].classList.remove('hide');
-    imgPreviewCollection[counter].classList.remove('shadow');
-    imgPreviewCollection[counter].classList.add('selected');
-  };
 });
